@@ -7,7 +7,6 @@ var all_center = Object.keys(airports).map(key => airports[key].center)
 var avg_lat = avg(all_center.map(center => center.lat()));
 var avg_lng = avg(all_center.map(center => center.lng()));
 
-console.log(avg_lat +" " +avg_lng);
 function init() {
 
 // Basic options for a simple Google Map
