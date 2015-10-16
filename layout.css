@@ -1,0 +1,14 @@
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+h1 {font-family: "helvetica";}
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px }
+#container { width: 100%; height: 100% }
+#map {
+  width: 100%;
+  height: 100%;
+}
+#title {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
