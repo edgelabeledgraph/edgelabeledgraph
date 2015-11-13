@@ -33,7 +33,9 @@ function gen_color(com) {
   var codes = "0123456789ABCDEF"
   var primes = [[7, 11], [11, 13], [17, 19], [23, 29], [31, 37], [41, 43]];
   var trans_code = primes.map(function(x){return codes[(com * x[0] + x[1])% 16 ]}).join("");
-  return "#"+trans_code;
+
+//  return "#"+trans_code;
+  return "#BC1421";
 }
 
 // ------------------------------------------------------------------------
