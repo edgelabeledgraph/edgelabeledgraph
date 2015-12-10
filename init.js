@@ -12,7 +12,7 @@ function init() {
 // Basic options for a simple Google Map
 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 var mapOptions = {
-zoomControl: false,
+zoomControl: true,
 mapTypeControl: false,
 scaleControl: false,
 streetViewControl: false,
