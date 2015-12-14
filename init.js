@@ -25,7 +25,7 @@ zoom: 4,
 center: new google.maps.LatLng(avg_lat, avg_lng),
 
 // How you would like to style the map.
-styles: [ {"featureType":"administrative", "elementType":"all", "stylers":[{"visibility":"off"}]}, {"featureType":"landscape", "elementType":"labels", "stylers":[{"visibility":"off"}]}, {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#eeeeee"},{"visibility":"on"}, {"lightness":-20}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#ffffff"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]},{featureType: "administrative.country", elementType: "labels", stylers: [{visibility:"off"}]}, {featureType: "administrative.country", elementType: "geometry", stylers: [{visibility:"on"}]}]
+styles: [ {"featureType":"administrative", "elementType":"all", "stylers":[{"visibility":"off"}]}, {"featureType":"landscape", "elementType":"labels", "stylers":[{"visibility":"off"}]}, {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#eeeeee"},{"visibility":"on"}, {"lightness":-8}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#ffffff"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]},{featureType: "administrative.country", elementType: "labels", stylers: [{visibility:"off"}]}, {featureType: "administrative.country", elementType: "geometry", stylers: [{visibility:"on"}]}]
 };
 
 // Get the HTML DOM element that will contain your map
@@ -41,14 +41,15 @@ function gen_color(com) {
   var trans_code = primes.map(function(x){return codes[(com * x[0] + x[1])% 16 ]}).join("");
 
 //  return "#"+trans_code;
-  return "#BC1421";
+//  return "#BC1421";
+  return "#FF0000";
 }
 
 // ------------------------------------------------------------------------
 for (var a in airports) {
   var marker = new google.maps.Marker({
     position: airports[a].center, map: map,
-    icon: {path: google.maps.SymbolPath.CIRCLE,scale: 2, strokeOpacity: 1, strokeWeight: 1, fillOpacity: 0.75,
+    icon: {path: google.maps.SymbolPath.CIRCLE,scale: 2, strokeOpacity: 1, strokeWeight: 5, fillOpacity: 0.75,
       strokeColor: gen_color(airports[a].com), fillColor: gen_color(airports[a].com)
     }
   });
